@@ -9,10 +9,10 @@ import {
   IonTabs,
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
-import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
+import { home, search, informationCircle } from 'ionicons/icons';
+import FeedTab from './pages/FeedTab';
+import SearchTab from './pages/SearchTab';
+import AboutTab from './pages/AboutTab';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -38,31 +38,31 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route exact path="/tab1">
-            <Tab1 />
+          <Route exact path="/feed">
+            <FeedTab />
           </Route>
-          <Route exact path="/tab2">
-            <Tab2 />
+          <Route exact path="/search">
+            <SearchTab />
           </Route>
-          <Route path="/tab3">
-            <Tab3 />
+          <Route path="/about">
+            <AboutTab />
           </Route>
           <Route exact path="/">
-            <Redirect to="/tab1" />
+            <Redirect to="/search" />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
+          {/*<IonTabButton tab="feed" href="/feed">*/}
+          {/*  <IonIcon icon={home} />*/}
+          {/*  <IonLabel>Feed</IonLabel>*/}
+          {/*</IonTabButton>*/}
+          <IonTabButton tab="search" href="/search">
+            <IonIcon icon={search} />
+            <IonLabel>Search</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+          <IonTabButton tab="about" href="/about">
+            <IonIcon icon={informationCircle} />
+            <IonLabel>About</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
