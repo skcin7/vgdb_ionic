@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "vgdb-ionic",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}

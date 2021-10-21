@@ -1,0 +1,7 @@
+{
+  "name": "vgdb-ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
